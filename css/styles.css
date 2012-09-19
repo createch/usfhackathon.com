@@ -1,0 +1,866 @@
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+
+/* ! Common Styles                */
+/* ------------------------------ */
+
+	/* Generic */
+	body {
+		margin-bottom: 50px;
+		background: #FFFAEF;
+	}
+	a {
+		color: #663A6D;
+		text-decoration: none;
+		-webkit-transition: color 500ms , opacity 500ms ;
+		-moz-transition: color 500ms , opacity 500ms ;
+		-o-transition: color 500ms , opacity 500ms ;
+		transition: color 500ms , opacity 500ms ;
+		-ms-transition: color 500ms , opacity 500ms ;
+
+	}
+	a:hover {
+		color: #89129C;
+	}
+	.hide {
+		display: none;
+	}
+	.row.center {
+		text-align: center;
+	}
+
+	/* Form */
+	input[type=text] {
+		padding: 10px 20px;
+		width: 41%;
+		border: 1px solid #463820;
+		border-radius: 1px;
+		border-bottom: #463820 2px solid;
+		background: #F7E5B5;
+		color: #271E01;
+		text-align: left;
+		letter-spacing: 2px;
+		font: 16px/16px 'maven_pro_light_300regular', Arial, sans-serif;
+	}
+	input.double {
+		width: 90.5%;
+	}
+	form .error-message {
+		color: #F93636;
+		font: 16px/16px 'maven_pro_light_300regular', Arial, sans-serif;
+		letter-spacing: 0px;
+		margin: 10px auto;
+		display: inline-block;
+	}
+	.button.error {
+		color: #F93636;
+	}
+	.button.error:hover {
+		color: #1C1B1B;
+		background: #F93636;
+	}
+
+	/* Typography */
+
+	body {
+		color: #47391F;
+		letter-spacing: normal;
+		font: 14px/28px "Open Sans", 'Helvetica Neue', Arial, sans-serif;
+	}
+	h1, h2, h3, h4, h5, h6, p, a {
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+	h3 {
+		font-size: 40px;
+		line-height: 40px;
+		letter-spacing: 3px;
+		text-align: center;
+	}
+	h4 {
+		font: 14px/20px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.serif {
+		font: 18px 'Kotta One', 'Adobe Garamond Pro', Garamond, Georgia, serif;
+	}
+	.cyan {.
+		color: #05D6D6;
+	}
+
+	/* Buttons */
+	.button {
+		display: inline-block;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		padding: 0px 10px;
+		background: #c09902;
+		box-shadow: 0px 2px 1px #4d462c;
+		color: #663a6d;
+		text-align: center;
+		text-decoration: none;
+		letter-spacing: 3px;
+		font: 12px/15px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+		padding-top: 8px;
+		padding-bottom: 10px;
+		cursor: pointer;
+		-webkit-transition: color 1s ease, background 300ms ease;
+		-moz-transition: color 1s ease, background 300ms ease;
+		-o-transition: color 1s ease, background 300ms ease;
+		transition: color 1s ease, background 300ms ease;
+		-ms-transition: color 1s ease, background 300ms ease;
+		border-radius: 5px;
+	}
+	.button.bold {	
+		padding: 15px 50px;
+		letter-spacing: 5px;
+		font-size: 16px;
+		line-height:20px;
+	}
+	.button:hover {
+		background: #663a6d;
+		color: #c09902;
+	}
+	.button.white {
+		color: #271E01;
+	}
+	.button.white:hover {
+		background: #05D6D6;
+	}
+	.button.full {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	/* Icons */
+
+	.icon {
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+	.icon:hover {
+		opacity: 0.7;
+		-webkit-transition: opacity 1s ease;
+		-moz-transition: opacity 1s ease;
+		-o-transition: opacity 1s ease;
+		transition: opacity 1s ease;
+		-ms-transition: opacity 1s ease;
+	}
+	.icon.pin {
+		width: 23px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -16px -15px;
+	}
+	.icon.tumbler {
+		width: 23px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -53px -15px;
+	}
+	.icon.tw {
+		width: 23px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -91px -15px;
+	}
+	.icon.fb {
+		width: 23px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -128px -15px;
+	}
+	.icon.action.tw {
+		width: 80px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -16px -52px;
+	}
+	.icon.action.pin{
+		width: 80px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -108px -52px;
+	}
+	.icon.action.tumbler {
+		width: 80px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -16px -87px;
+	}
+	.icon.action.share {
+		width: 82px;
+		height: 25px;
+		background: url('../images/social-icons.png') no-repeat -107px -87px;
+	}
+	.icon.comments {
+		width: 17px;
+		height: 13px;
+		background: url('../images/comments.png') no-repeat;
+	}
+	.icon.likes {
+		width: 15px;
+		height: 14px;
+		background: url('../images/likes.png') no-repeat;
+	}
+
+	/* inline dashes */
+	.dash {
+		display: inline-block;
+		width: 30px;
+		height: 1px;
+		vertical-align: middle;
+		line-height: 0px;
+		background: #47391F;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.dash.grey {
+		background: #47391F;
+	}
+	.dash.darkgrey {
+		background: #494949;
+	}
+	.dash.white {
+		background: #DBDBDB;
+	}
+	.dash.w50 {
+		width: 50px;
+	}
+	.dash.w75 {
+		width: 75px;
+	}
+	.dash.w100 {
+		width: 100px;
+	}
+	.dash.w150 {
+		width: 150px;
+	}
+	.dash.w200 {
+		width: 200px;
+	}
+
+	/* Header */
+	.header {
+		padding: 10px 0px 0px;
+		border-bottom: #302500 2px solid;
+		background: #463820;
+		box-shadow: 0px 2px 3px #050402;
+	}
+	.header .logo {
+		margin: 0 auto;
+		width: 200px;
+	}
+	.header .logo h1 {
+		margin-left: -1000px;
+		color: transparent;
+		font-size: 0;
+		position: absolute;
+	}
+	.header .logo {
+		display: inline-block;
+		float: left;
+		position: relative;
+		left: 50%;
+	}
+	.header .logo img {
+		position: relative;
+		left: -50%;
+	}
+
+	.header .search input {
+		width: 150px;
+		font-size: 13px;
+		padding: 5px 10px;
+		text-align: left;
+		color: #808080;
+		border: 1px solid #555;
+	}
+	.header .search {
+		float: right;
+		display: inline-block;
+	}
+	.header .search input {
+		width: 150px;
+		font-size: 13px;
+		padding: 5px 10px;
+		text-align: left;
+		color: #808080;
+		border: 1px solid #555;
+		margin: 0px;
+	}
+	.header .schedule {
+		font: 11px/15px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	/* Footer */
+	.footer {
+		margin: 0px 0px 20px;
+		background: #1C1B1B;
+		text-align: center;
+	}
+	.footer .inner {
+		padding: 40px 0px;
+	}
+	.footer .inner.middle {
+		margin-bottom: -1000px;
+		padding-bottom: 1000px;
+		border-right: 1px solid #000;
+		border-left: 1px solid #000;
+	}
+	.footer a {
+		color: #271E01;
+	}
+	.footer a:hover {
+		opacity: 0.5;
+	}
+	.footer .copyright {
+		color: #271E01;
+	}
+	.credit {
+		font: 11px/15px NovecentowideLightRegular, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.credit a {
+		color: #271E01;
+		font: 11px/15px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.credit a:hover {
+		opacity: 0.5;
+	}
+
+	/* Smoothing */
+	.footer, .credit {
+		-webkit-backface-visibility: hidden;
+		
+	}
+
+/* ! Landing Page Styles          */
+/* ------------------------------ */
+
+	/* Landing Page Hero */
+	.landing .hero {
+		padding-top: 50px;
+		padding-bottom: 40px;
+		/* TODO: background: url(../images/headline-shading.jpg) center top no-repeat; */
+		background: #E8B901;
+	}
+	.landing .hero h2, .landing .hero h3, .landing .hero .subtitle {
+		text-align: center;
+		letter-spacing: 0px;
+	}
+	.landing  h1 {
+		font: 110px/90px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+		color: #271E01;
+	}
+	.landing  h2 {
+		font: 90px/90px NovecentowideLightRegular, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.landing .hero h3 {
+		padding-bottom: 10px;
+		letter-spacing: 7px;
+		font: 22px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.landing .hero .subtitle {
+		color: #47391F;
+		line-height: 40px;
+	}
+	.landing .hero h3 .dash {
+		width :90px;
+	}
+	.landing .hero h4 {
+		font: 19px/19px NovecentowideNormalRegular, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.landing .dash-box {
+		padding-top: 15px;
+		padding-bottom: 10px;
+	}
+	.landing .dash-box .dash {
+		margin: 5px;
+		margin-top: -5px;
+		width: 30px;
+	}
+	.landing .dash-box .number {
+		color: #271E01;
+		font: 35px/10px 'Kotta One', 'Adobe Garamond Pro', Garamond, Georgia, serif;
+	}
+	.landing .dash-box .text {
+		display: block;
+		margin-top: -5px;
+		color: #271E01;
+		letter-spacing: 2px;
+		font: 10px/9px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	/* actions bar */
+	.landing .actionsbar {
+		margin-top: 30px;
+		margin-bottom: 50px;
+		border-top: #1A1919 2px solid;
+		border-bottom: #1A1919 6px solid;
+		background: #0D0D0D;
+	}
+	.landing .actionsbar h3, h4 {
+		display: inline-block;
+	}
+	.landing .actionsbar h3 {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		color: #271E01;
+		vertical-align: middle;
+		text-transform: uppercase;
+		font: normal normal normal 42px 'metropolisregular', Arial, sans-serif;
+	}
+	.landing .actionsbar h4 {
+		color: #05D6D6;
+		vertical-align: middle;
+		text-align: left;
+		font: 14px/15px 'Kotta One', 'Adobe Garamond Pro', Garamond, Georgia, serif;
+	}
+
+	.section {
+		-webkit-backface-visibility: hidden;
+	}
+
+	/* Mailchimp Sign Up Page */
+	#mc-signup #email-entry {
+		display: block;
+		margin: 0 auto;
+		width: 354px;
+	}
+	.landing #mc-signup .email {
+		float: left;
+		display: inline-block;	
+		margin: 0px;
+		width: 250px;
+	}
+	.landing #mc-signup .submit {
+		float: left;
+		display: inline-block;
+		margin: 0px auto;
+		padding: 0px;
+		padding-top: 15px;
+		padding-bottom: 14px;
+		width: 60px;
+		height: auto;
+		border: 1px solid #1C1B1B;
+		font: 10px/10px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	/* Mailchimp Thank You Page */
+	.landing #mc-results .hero {
+		padding-bottom: 0px;
+	}
+	.landing #mc-results .dash-box {
+		padding-top: 5px;
+		padding-bottom: 15px;
+	}
+
+	/* Footer */
+	.landing .footer {
+		margin-top: 20px;
+	}
+	/*.herodetails */
+	.herodetails {
+		margin-top: 0px;
+		text-align: left;
+		background: #E8B901;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #B38D25;
+	}
+	.herodetails .button {
+		background: #47391F;
+		color: #FFFAEF;
+		box-shadow: 0px 2px 1px #261C02;
+	}
+	.herodetails .button:hover {
+		background: #61416B;
+		color: #E7B630;
+	}	
+	p,  ul {
+		text-align: left;
+		font: 14px/19px "Open Sans", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		letter-spacing: normal;
+	}
+	.center {
+		text-align: center;
+	}
+	p.serif {
+		font: 18px 'Kotta One', 'Adobe Garamond Pro', Garamond, Georgia, serif;
+	}
+	ul {
+		margin-left: 25px;
+	}
+	/* Hero Action */
+	.heroaction {
+		text-align: center;
+	}
+	.heroaction .serif {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	/* Info cols */
+	.infocols {
+		margin-top: 10px;
+		padding-top: 10px;
+		padding-bottom: 30px;
+	}
+	.infocols h3 {
+		font: 30px/30px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+		text-align: left;
+		letter-spacing: 0px;
+		margin-top: 20px;
+	}
+
+	/* Ideas Iframe */
+	.ideas {
+		background: #231F19;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		border-top: 2px solid #4D3917;
+		border-bottom: 1px solid #B38D25;
+	}
+	.ideas iframe {
+		padding: 0px;
+		border: 5px solid #876928;
+	}
+	.ideas h2 {
+		margin-bottom: 20px;
+		color: #E7B630;
+		font: 70px/70px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+
+/* ! Main Application Styles      */
+/* ------------------------------ */
+
+
+/* ! Homepage Stlyes              */
+/* ------------------------------ */
+
+	/* hero */
+
+
+	.homepage .hero {
+		background: #271E01;
+		height: 187px;
+	}
+	.homepage .hero .row {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.homepage .hero h2 {
+		font: 70px/70px NovecentowideLightBold'Helvetica Neue', Arial, sans-serif;
+		margin-bottom: 10px;
+	}
+	.homepage .hero .status {
+		font-size: 30px;
+		color: #000;
+	}
+	.homepage .hero .corner {
+		background: url('../images/hero-right-corner.png') no-repeat top left;
+		width: 187px;
+		height: 187px;
+		display: inline-block;
+		position: absolute;
+		left: 0px;
+	}
+	.homepage .hero .corner.right {
+		background: url('../images/hero-left-corner.png');
+		left: auto;
+		right: 0px;
+	}
+	/* postbar */
+	.homepage .postbar {
+		background: #111111;
+		padding: 20px 0px;
+		border-bottom: 1px solid #000;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	.homepage .postbar.first {
+		padding-top: 30px;
+		border-top: 1px solid #000;
+		box-shadow: 0px 0px 10px #000;
+	}
+	/* leaders */
+	.homepage .leaders.postbar {
+		color: #271E01;
+	}
+	.homepage .leaders .names {
+		margin-top: 15px;
+	}
+	.homepage .leaders .name {
+		margin-right: 70px;
+		white-space: nowrap;
+	}
+	.homepage .leaders .name.last {
+		margin-right: 0px;
+	}
+	.homepage .leaders .arrow.more {
+		position: relative;
+		margin-right: 10%;
+		float: right;
+		margin-top: -90px;
+	}
+	.homepage .leaders .arrow.more:hover {
+		opacity: 0.7;
+	}
+	/* days */
+	.homepage .days .row {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.homepage .days .day {
+		color: #555555;
+		margin-right: 70px;
+		font: 14px/14px NovecentowideNormalRegular 'Helvetica Neue', Arial, sans-serif;
+		white-space: nowrap;
+	}
+	.homepage .days .day.last {
+		margin-right: 0px;
+	}
+	.homepage .days .day.current, .homepage .days .day:hover {
+		color: #ccc;
+	}
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+
+/* ! Common Styles                */
+/* ------------------------------ */
+
+	/* Generic */
+	.row.center {
+		margin: 0 auto;
+	}
+
+	/* Form */
+
+	/* Typography */
+
+	/* Buttons */
+
+	/* Icons */
+
+	/* inline dashes */
+	.autohide {
+		display: none;
+	}
+
+	/* Header */
+
+	/* Footer */
+	.footer {
+		padding: 15px 0;
+	}
+	.footer .inner {
+		padding: 0px;
+	}
+	.footer .inner.middle {
+		border: none;
+	}
+
+
+
+/* ! Landing Page Styles          */
+/* ------------------------------ */
+
+	/* Landing Page Hero */
+	.landing .hero h3 {
+		font-size: 20px;
+	}
+	.landing .hero h2 {
+		font-size: 70px;
+	}
+
+	/* actions bar */
+
+	/* Mailchimp Sign Up Page */
+
+	/* Mailchimp Thank You Page */
+
+	/* Invitation Entry Page */
+
+
+
+
+/* ! Main Application Styles      */
+/* ------------------------------ */
+
+	/* Feed Item */
+	.feed-item .details {
+		clear: both;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+/* ! Homepage Stlyes              */
+/* ------------------------------ */
+
+	/* hero */
+	.homepage .hero .corner {
+		display: none;
+	}
+	.homepage .hero {
+		height: auto;
+	}
+	/* postbar */
+
+	.homepage .leaders .names .name {
+		margin: 0px;
+		display: block;
+	}
+	.homepage .leaders .arrow.more {
+		display: block;
+		position: static;
+		top: auto;
+		left: auto;
+		margin: 15px auto 0px;
+		float: none;
+		text-align: center;
+	}
+	.homepage .days .day {
+		margin: 10px;
+	}
+	.herodetails {
+		margin-top: 0px;
+	}
+
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+
+
+/* ! Common Styles                */
+/* ------------------------------ */
+	/* Generic */
+
+	/* Form */
+
+	/* Typography */
+
+	/* Buttons */
+
+	/* Icons */
+
+	/* Header */
+
+	.header {
+		position: fixed;
+		z-index: 1000;
+		padding: 10px 0;
+		border-bottom-width: 2px;
+		height: 30px;
+	}
+	.header .logo {
+		padding: auto 0px;
+		width: 150px;
+	}
+	.fixed-header-push.hide {
+		display: block;
+		height: 55px;
+	}
+
+	/* Footer */
+
+
+
+/* ! Landing Page Styles          */
+/* ------------------------------ */
+	/* Landing Page Hero */
+
+	.landing .hero {
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+	.landing .hero h2 {
+		font-size: 35px;
+		line-height: 35px;
+	}
+	.landing .hero h1 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.landing .hero h3 {
+		letter-spacing: 2px;
+		font-size: 15px;
+		line-height: 15px;
+	}
+	.landing .hero .subtitle {
+		display: none;
+	}
+	.landing .dash-box {
+	}
+
+	/* inline dashes */
+
+	/* actions bar */
+
+
+	/* Mailchimp Sign Up Page */
+
+	#mc-signup .email {
+		max-width: 100%;
+		margin: 0 auto 10px;
+		clear: both;
+		display: block;
+		float: none;
+		position: relative;
+		display: block;
+		clear: both;
+		float: left;
+		width: 210px;
+		margin-left: 10%;
+	}
+	#mc-signup .submit	 {
+		position: relative;
+		display: block;
+		clear: both;
+		float: left;
+		width: 250px;
+		padding: 15px auto;
+		margin-left: 10%;
+		margin-right: 10%;
+
+	}
+	#mc-signup .error-message {
+		width: 250px;
+		margin-left: -30px;
+	}
+
+	/* Mailchimp Thank You Page */
+
+	/* Invitation Entry Page */
+
+
+
+/* ! Main Application Styles      */
+/* ------------------------------ */
+
+	/* Feed Item */
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+	/* TODO
+		- create @2x social images
+		- create @2x down arrows
+	*/
+
+}
