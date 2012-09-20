@@ -65,21 +65,20 @@
         
         // get the value
         gotFunc = ((val.length > 0 || required === 'sometimes') && isFunction(opts.test));
-        
+        var defaultVal = el.attr("default");
+
         // check if we've got an error on our hands
-        if (submit === true && required === true && val.length === 0) {
+        if (submit === true && required === true && val.length === 0 || (val === defaultVal && required === true)) {
           error = true;
         } else if (gotFunc) {
-          error = !opts.test(val, arg);
+          error = !opts.test(val, arg) || val === defaultVal;
         }
         
         if (error) {
           if (config.unhappyCallback) {
             config.unhappyCallback(opts);
           }
-          else {
-            el.addClass('unhappy').before(errorEl);
-          }
+          el.addClass('unhappy');
           return false;
         } else {
           temp = errorEl.get(0);
@@ -89,8 +88,7 @@
           }
           if (config.happyCallback)
             config.happyCallback();
-          else
-            el.removeClass('unhappy');
+          el.removeClass('unhappy');
           return true;
         }
       };

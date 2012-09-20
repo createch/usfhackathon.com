@@ -18,7 +18,6 @@
 
 	<!-- Fonts -->
 	<link rel="stylesheet" href="css/webfonts/fonts.css" type="text/css" media="screen" /
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
 
 	<script type="text/javascript" src="js/lib/css3-mediaqueries.js"></script>
 
@@ -69,24 +68,25 @@
 			<div class="serif">
 				<span>Saturday, October 6th &mdash; 10am</span><br />
 			</div>
-			<div><a href="#!/signup" id="request-invite" class="button">Sign Up As A Designer</a></div>
-			<div><a href="#!/signup" id="request-invite" class="button">Sign Up As A Developer</a></div>
+			<div id="signup-designer" class="signup button" data-value="designer">Sign Up As A Designer</div>
+			<div id="signup-developer" class="signup button" data-value="developer">Sign Up As A Developer</div>
 		</div>
-		<div class="sevencol">
+		<div class="sevencol" id="hero1">
 			<p class="serif">Tired of spending Saturday's doing homework? Or stuck in your dorm? Spending too much time working alone on that side project?</p>
 			<p>Make this weekend unlike any other. Join us for a day of epic code, caffeine, free food, and swag!</p>
 			<p>Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general.</p>
 			<p>One rule. Your app must relate to USF, Tampa, or Hillsborough. Build anything from an app that shows you the menu at Juniper Dining to a text messaging service that tells you when the next HART bus is coming. And if you don't necessarily know how to build something, the person sitting next to you probably will.</p>
-			<h4><a href="javascript:void(window.scrollTo('ideas'))" target="_blank">Jump to the ideas &gt;</a></h4>
+			<h4><a href='javascript:void($("html,body").animate({scrollTop: $(".ideas").offset().top}))' target="_blank">Jump to the ideas &gt;</a></h4>
 		</div>
-		<div class="sixcol last hide">
+		<div class="sevencol last hide" id="hero2">
 			<form id="email-entry">
-				<input class="email" type="text" name="email" value="" placeholder="First Name" />
-				<input class="email" type="text" name="email" value="" placeholder="Last Name" />
-				<input class="email double" type="text" name="email" value="" placeholder="USF Email Address" />
-				<input class="email double" type="text" name="email" value="" placeholder="Phone Number" />
-				<input class="email double" type="text" name="email" value="" placeholder="Website/Github/Portfolio" />
-				<a class="submit button">Done</a>
+				<input class="first autofocus" type="text" name="first" value="" default="First Name*"/>
+				<input class="last" type="text" name="last" value="" default="Last Name*" />
+				<input class="email" type="text" name="email" value="" default="USF Email Address*" />
+				<input class="phone" type="text" name="phone" value="" default="Phone Number*" />
+				<input class="website double" type="text" name="website" value="" default="Website/Github/Portfolio" />
+				<input type="hidden" name="skill" class="skill" value="" />
+				<span class="submit button" type="">Submit</span>
 				<div class="error-message"></div>
 			</form>
 		</div>
@@ -149,15 +149,12 @@
 
 <div class="container ideas">
 	<div class="row twelvecol center">
-		<a href="ij" name="ideas">a</a>
 		<h2 class="">Ideas</h2>
 		<h4 class="">Got an idea? Share it here.<br />Need an idea? Vote for one here.</h4>
 	</div>
 	<div class="row">
 		<div class="twocol"></div>
-		<div class="eightcol">
-			<iframe src="http://createchusf.uservoice.com/forums/177021-general" class="" style="height: 700px; width: 98%;">
-			</iframe>
+		<div class="eightcol" id="ideasrow">
 		</div>
 		<div class="twocol"></div>
 	</div>
@@ -166,9 +163,7 @@
 <div class="container footer">
 	<div class="row center">
 		<img class="leaf" src="images/leaf.png" width="30">
-		<div>
-			Brought to you by <a href="http://createch.me">Createch At USF</a>
-		</div>
+		<div>Brought to you by<br /><a href="http://createch.me">Createch At USF</a></div>
 	</div>
 </div>
 
@@ -176,15 +171,13 @@
 <script type="text/javascript" src="js/lib/happy.js"></script>
 <script type="text/javascript" src="js/landing.js"></script>
 <script type="text/javascript">
-	router.init();
 </script>
 
 <!-- Live Reload -->
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-<!-- Weinre 
- <script src="http://localhost:8080/target/target-script-min.js#2398230876578"></script> 
+<!-- Weinre  
+ <script src="http://131.247.233.193:12345/target/target-script-min.js#2398230876578"></script> 
 -->
-
 </body>
 
 </html>
