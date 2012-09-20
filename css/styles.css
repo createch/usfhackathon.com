@@ -14,7 +14,7 @@
 	a {
 		color: #663A6D;
 		text-decoration: none;
-		-webkit-transition: color 500ms , opacity 500ms ;
+		-webkit-transitzion: color 500ms , opacity 500ms ;
 		-moz-transition: color 500ms , opacity 500ms ;
 		-o-transition: color 500ms , opacity 500ms ;
 		transition: color 500ms , opacity 500ms ;
@@ -229,6 +229,9 @@
 	.dash.w100 {
 		width: 100px;
 	}
+	.dash.w125 {
+		width: 125px;
+	}
 	.dash.w150 {
 		width: 150px;
 	}
@@ -238,10 +241,10 @@
 
 	/* Header */
 	.header {
-		padding: 10px 0px 0px;
-		border-bottom: #302500 2px solid;
-		background: #463820;
+		padding: 10px 0px 1px;
+		background: #DFB100;
 		box-shadow: 0px 2px 3px #050402;
+		display: none;
 	}
 	.header .logo {
 		margin: 0 auto;
@@ -290,36 +293,19 @@
 	}
 	/* Footer */
 	.footer {
-		margin: 0px 0px 20px;
-		background: #1C1B1B;
 		text-align: center;
+		padding: 20px;
 	}
-	.footer .inner {
-		padding: 40px 0px;
+	.footer {
+		font: 15px/15px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
 	}
-	.footer .inner.middle {
-		margin-bottom: -1000px;
-		padding-bottom: 1000px;
-		border-right: 1px solid #000;
-		border-left: 1px solid #000;
+	.footer .leaf {
+		margin: 15px auto;
 	}
 	.footer a {
 		color: #271E01;
 	}
 	.footer a:hover {
-		opacity: 0.5;
-	}
-	.footer .copyright {
-		color: #271E01;
-	}
-	.credit {
-		font: 11px/15px NovecentowideLightRegular, 'Helvetica Neue', Arial, sans-serif;
-	}
-	.credit a {
-		color: #271E01;
-		font: 11px/15px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
-	}
-	.credit a:hover {
 		opacity: 0.5;
 	}
 
@@ -334,7 +320,7 @@
 
 	/* Landing Page Hero */
 	.landing .hero {
-		padding-top: 50px;
+		padding-top: 40px;
 		padding-bottom: 40px;
 		/* TODO: background: url(../images/headline-shading.jpg) center top no-repeat; */
 		background: #E8B901;
@@ -448,10 +434,6 @@
 		padding-bottom: 15px;
 	}
 
-	/* Footer */
-	.landing .footer {
-		margin-top: 20px;
-	}
 	/*.herodetails */
 	.herodetails {
 		margin-top: 0px;
@@ -497,10 +479,10 @@
 	.infocols {
 		margin-top: 10px;
 		padding-top: 10px;
-		padding-bottom: 30px;
+		padding-bottom: 10px;
 	}
 	.infocols h3 {
-		font: 30px/30px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+		font: 20px/30px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
 		text-align: left;
 		letter-spacing: 0px;
 		margin-top: 20px;
@@ -510,20 +492,23 @@
 	.ideas {
 		background: #231F19;
 		margin-top: 20px;
-		margin-bottom: 20px;
 		padding-top: 40px;
 		padding-bottom: 40px;
 		border-top: 2px solid #4D3917;
 		border-bottom: 1px solid #B38D25;
 	}
+	.ideas h2 {
+		margin-bottom: 0px;
+		color: #E7B630;
+		font: 70px/70px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.ideas h4 {
+		margin-bottom: 20px;
+		color: #8D507D;
+	}
 	.ideas iframe {
 		padding: 0px;
 		border: 5px solid #876928;
-	}
-	.ideas h2 {
-		margin-bottom: 20px;
-		color: #E7B630;
-		font: 70px/70px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
 	}
 
 /* ! Main Application Styles      */
@@ -631,9 +616,7 @@
 
 	/* Generic */
 	.row.center {
-		margin: 0 auto;
 	}
-
 	/* Form */
 
 	/* Typography */
@@ -835,6 +818,10 @@
 
 	/* Invitation Entry Page */
 
+
+	.ideas {
+		display: none;
+	}
 
 
 /* ! Main Application Styles      */
