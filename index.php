@@ -61,7 +61,19 @@
 		<div class="threecol heroaction">
 			<div class="dash-box center">
 				<span class="dash darkgrey"></span>
-				<span class="number">50</span>
+				<?
+					require_once 'config.php';
+					require_once 'idiorm/idiorm.php';
+
+					ORM::configure('mysql:host=localhost;dbname=hackathon');
+					ORM::configure('username', $user);
+					ORM::configure('password', $pass);
+
+					$max_seats = ORM::for_table('option')->where('name', 'max_guests')->find_one()->value;
+					$seats_filled = ORM::for_table('guest')->where('status', 'valid')->count();
+					$empty_seats = $max_seats - $seats_filled;
+				?>
+				<span class="number"><? echo $empty_seats  ?></span>
 				<span class="dash darkgrey"></span>
 				<span class="text">seats remain</span>
 			</div>
