@@ -358,6 +358,16 @@
 	.landing .hero h4 {
 		font: 19px/19px NovecentowideNormalRegular, 'Helvetica Neue', Arial, sans-serif;
 	}
+	.landing #hero3 h3 {
+		font: 29px/29px NovecentowideNormalRegular, 'Helvetica Neue', Arial, sans-serif;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.landing #hero3 #signup-message {
+		font: 15px/29px "Open Sans", 'Helvetica Neue', Arial, sans-serif;
+		text-align: center;
+		position: relative; 
+	}
 	.landing .dash-box {
 		padding-top: 15px;
 		padding-bottom: 10px;
@@ -429,6 +439,7 @@
 		background: #7D6B27;
 		color: #B8A970;
 		box-shadow: 0px 2px 1px #443A15;
+		cursor: default;
 	}
 	.herodetails .button.error {
 		color: #F93636;

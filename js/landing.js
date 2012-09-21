@@ -15,6 +15,7 @@
 			var _this = this;
 			this.hero1 = $("#hero1");
 			this.hero2 = $("#hero2");
+			_this.hero3 = $("#hero3");
 
 			helpers.autoClearInput($("input.first"));
 			helpers.autoClearInput($("input.last"));
@@ -51,11 +52,23 @@
 						url: 'subscribe.php',
 						data: $("#signup-form").serialize(),
 						success: function(data) {
+							data = JSON.parse(data);
 							if (data.result === "success") {
-								window.location.hash = "!/thanks";
-								// _gaq.push(["_trackEvent","Landing", "Signup"]);
-							} else {
-								helpers.showAjaxError($("#signup-form"), "There was an error, try again", data.message);
+								_this.hero2.fadeOut(500, function() {
+									_this.hero3.fadeIn(500, function() {
+										if (data.status === "waitlist") {
+											var statusmsg = "waitlist.";
+										}
+										else {
+											var statusmsg = "attendees list.";
+										}
+										$.cookie('completed_signup', 'true', { expires: 360 });
+										$("#signup-message").text("You have been placed on the " + statusmsg)
+									});
+								});
+							}
+							else {
+								helpers.showAjaxError($("#signup-form"), "There was an error, try again", error.responseText.message);
 							}
 						},
 						error: function(error) {
@@ -138,7 +151,10 @@
 		}
 	};
 
-
-	signup.init();
+	if ($.cookie('completed_signup') !== 'true')
+		signup.init();
+	else {
+		$(".signup.button").addClass("inactive");
+	}
 
 })(jQuery, window);
