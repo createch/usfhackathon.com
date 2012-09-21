@@ -4,7 +4,7 @@
   }
   $.fn.isHappy = function (config) {
     var fields = [], item;
-    
+
     function getError(error) {
       return $('<span id="'+error.id+'" class="unhappyMessage">'+error.message+'</span>');
     }
@@ -14,9 +14,10 @@
       for (i = 0, l = fields.length; i < l; i += 1) {
         if (!fields[i].testValid(true)) {
           errors = true;
+          console.log(fields[i]);
+          console.log(fields[i].testValid(true));
         }
       }
-
 
       if (errors) {
         if (isFunction(config.unhappyCallback)) config.unhappyCallback();
@@ -41,6 +42,7 @@
         errorEl = $(error.id).length > 0 ? $(error.id) : getError(error);
 
       fields.push(field);
+      
       field.testValid = function (submit) {
         var val,
           el = $(this),

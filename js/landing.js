@@ -6,7 +6,6 @@
 		$("#ideasrow").html('<iframe src="http://createchusf.uservoice.com/forums/177021-general" class="" style="height: 700px; width: 98%;"><a href="http://createchusf.uservoice.com/forums/177021-general" class="button" target="_blank">View the ideas</a></iframe>');
 	}
 
-
 	/* Mailchimp Form */
 	var signup = {
 
@@ -46,6 +45,7 @@
 			$('#signup-form').isHappy({
 				submitButton: '#signup-form .submit',
 				submitCallback: function() {
+					alert("Hai");
 					$.ajax({
 						type: 'POST',
 						url: 'subscribe.php',
@@ -65,27 +65,27 @@
 					});
 				},
 				fields: {
-					'.email': {
+					'#signup-form .email': {
 						required: true,
 						test: function(val) {
 							return (/^(?:\w+\.?)*\w+@(?:\w+\.)+\w+$/).test(val);
 						},
 						message: 'Invalid email'
 					},
-					'.first': {
-						required: true,
+					'#signup-form .first': {
+						required: true
 					},
-					'.last': {
-						required: true,
+					'#signup-form .last': {
+						required: true
 					},
-					'.phone': {
+					'#signup-form .phone': {
 						required: true,
 						test: function(val) {
 							return (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/).test(val);
 						}
 					},
-					'.website': {
-						required: false,
+					'#signup-form .website': {
+						required: false
 					}
 				},
 				when: 'paste blur input' // propertychange input paste blur focus
