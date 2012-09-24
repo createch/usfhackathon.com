@@ -26,8 +26,10 @@
 			// bind events
 			$(".signup.button").on("click", function() {
 
+				skill = $(this).data("value");
+
 				// set the skill value
-				$("input.skill").val($(this).data("value"));
+				$("input.skill").val(skill);
 
 				$(".signup.button").addClass("inactive");
 
@@ -40,6 +42,9 @@
 						$("input.autofocus").focus().select();
 					});
 				});
+
+				_gaq.push(['_trackEvent', 'Signup', 'Button Clicked', skill]);
+
 			});
 
 
@@ -52,13 +57,16 @@
 						data: $("#signup-form").serialize(),
 						success: function(data) {
 							data = JSON.parse(data);
+							_gaq.push(['_trackEvent', 'Signup', 'Form Result', skill]);
 							if (data.result === "success") {
 								_this.hero2.fadeOut(500, function() {
 									_this.hero3.fadeIn(500, function() {
 										if (data.status === "waitlist") {
+											_gaq.push(['_trackEvent', 'Signup', 'Waitlisted', skill]);
 											var statusmsg = "waitlist.";
 										}
 										else {
+											_gaq.push(['_trackEvent', 'Signup', 'Registered', skill]);
 											var statusmsg = "attendees list.";
 										}
 										$.cookie('completed_signup', 'true', { expires: 360 });
@@ -68,11 +76,13 @@
 							}
 							else {
 								helpers.showAjaxError($("#signup-form"), "There was an error, try again", error.responseText.message);
+								_gaq.push(['_trackEvent', 'Signup', 'Error - Server JSON', skill]);
 							}
 						},
 						error: function(error) {
 							console.log(error);
 							helpers.showAjaxError($("#signup-form"), "There was an error, try again", error.responseText.message);
+							_gaq.push(['_trackEvent', 'Signup', 'Error - Server 500', skill]);
 						}
 					});
 				},

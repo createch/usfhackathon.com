@@ -2,9 +2,14 @@
 
 /*
 
-curl -d "first=asdf&last=sdwef&email=ijf@ijeif.com&skill=designer&phone=23i1&website=wefwef.com" http://localhost/createch-hackathon/subscribe.php
+curl -d "first=asdf&last=sdwef&email=luqmaan@createchwebdesign.com&skill=designer&phone=23i1&website=wefwef.com" http://localhost/usfhackathon.com/subscribe.php
 
 */
+
+if ($_POST['email'] == 'email@mail.com')
+	die();
+
+header("Cache-Control: no-cache");
 
 require_once 'config.php';
 require_once 'idiorm/idiorm.php';
@@ -34,6 +39,13 @@ $guest->website = $_POST['website'];
 $guest->created_on = date('Y-m-d H:i:s');
 $guest->status = $status;
 $guest->save();
+
+$sysmsg = $guest->first . " : first\n" . $guest->last . " : last\n" . $guest->email . " : email\n" . $guest->phone . " : phone\n" . $guest->skill . " : skill\n" . $guest->website . " : website\n"  . $guest->status . " : status\n";
+$guestmsg = "Hey ". $guest->first .",\n\nThanks for signing up for the The Createch Hackathon. See you on the Saturday that your Saturday will be.\n\nBe sure to view and share your ideas for what to build at the hackathon, here http://createchusf.uservoice.com/forums/177021-general \n\n -\nCreatech at USF\nhttp://facebook.com/createchusf\n (Oh, and do let us know if we're taking the Old Spice Man joke a little too far. :P) ";
+
+mail($guest->email, "Registered: The Createch Hackathon", $guestmsg, $headers);
+mail('luqmaan@createchwebdesign.com', $guest->first . " " . $guest->last, $sysmsg);
+mail('hebrontgeorge@gmail.com', $guest->first . " " . $guest->last, $sysmsg);
 
 $output = array(
 	"result" => "success",

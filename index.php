@@ -6,7 +6,12 @@
 	<title>The Createch Hackathon</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+	<meta property="og:title" content="The Createch Hackathon" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.usfhackathon.com/" />
+	<meta property="og:description" content="USF's First Hackathon - On Saturday, October the 6th, join us for a day of epic code, caffeine, free food, and swag! Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general. One rule. Your app must relate to USF, Tampa, or Hillsborough." /> 
+	<meta property="og:image" content="http://www.usfhackathon.com/assets/the-saturday-your-saturday-could-be-square.jpg" />
+
 	<!-- 1140px Grid styles for IE -->
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
 
@@ -84,11 +89,26 @@
 			<div id="signup-developer" class="signup button" data-value="developer">Sign Up As A Developer</div>
 		</div>
 		<div class="sevencol last" id="hero1">
-			<p class="serif">Tired of spending Saturday's doing homework? Or stuck in your dorm? Spending too much time working alone on that side project?</p>
-			<p>Make this weekend unlike any other. Join us for a day of epic code, caffeine, free food, and swag!</p>
-			<p>Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general.</p>
-			<p>One rule. Your app must relate to USF, Tampa, or Hillsborough. Build anything from an app that shows you the menu at Juniper Dining to a text messaging service that tells you when the next HART bus is coming. And if you don't necessarily know how to build something, the person sitting next to you probably will.</p>
-			<h4><a href='javascript:void($("html,body").animate({scrollTop: $(".ideas").offset().top}))' target="_blank">Jump to the ideas &gt;</a></h4>
+			<?
+				$ab =  $_GET['ab'] || rand(0,1);
+				switch ($ab) {
+					case 0: ?>
+						<p class="serif">Tired of spending Saturday's doing homework? Or stuck in your dorm? Spending too much time working alone on that side project?</p>
+						<p>Make this weekend unlike any other. Join us for a day of epic code, caffeine, free food, and swag!</p>
+						<p>Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general.</p>						<p>One rule. Your app must relate to USF, Tampa, or Hillsborough. Build anything from an app that shows you the menu at Juniper Dining to a text messaging service that tells you when the next HART bus is coming. And if you don't necessarily know how to build something, the person sitting next to you probably will.</p>
+						<h4><a href='javascript:void($("html,body").animate({scrollTop: $(".ideas").offset().top}))' target="_blank">Jump to the ideas &gt;</a></h4>
+					<? break;
+
+					case 1: default: ?>
+						<p class="serif saturday">The Saturday your Saturday could be.</p>
+						<p>Look at your calendar. Now look back at me. Now look at your calendar. Now look back at me.</p>
+						<p>See that Saturday on the 6th? That's the Saturday your Saturday could be. Sadly, it isn't. But it could be, if you went to the Createch Hackathon.</p>
+						<p>On Saturday, October the 6th, join us for a day of epic code, caffeine, free food, and swag! Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general.</p>
+						<p>One rule. Your app must relate to USF, Tampa, or Hillsborough. Build anything from an app that shows you the menu at Juniper Dining to a text messaging service that tells you when the next HART bus is coming. And if you don't necessarily know how to build something, the person sitting next to you probably will.</p>
+						<h4><a href='javascript:void($("html,body").animate({scrollTop: $(".ideas").offset().top}))' target="_blank">Jump to the ideas &gt;</a></h4>
+					<? break;
+				}
+			?>
 		</div>
 		<div class="sevencol last hide" id="hero2">
 			<form id="signup-form">
@@ -107,6 +127,13 @@
 			<div id="signup-message"><br /></div>
 		</div>
 		<div class="onecol last"></div>
+	</div>
+</div>
+<div class="container news">
+	<div class="row">
+		<div class="twelvecol">
+			<p>News: We're excited to announce our first sponsor! The <a href="http://www.tbtf.org" target="_blank">Tampa Bay Technology Forum</a>. </p>
+		</div>
 	</div>
 </div>
 <div class="container infocols">
@@ -155,6 +182,7 @@
 			<h3>Rules</h3>
 			<ul>
 				<li>All entries must relate to USF, Tampa or Hillsborough County</li>
+				<li>All entries must be submitted via Github</li>
 				<li>Teams may consist of up to five developers</li>
 				<li>The competition is open to all USF students</li>
 				<li>Teams may win 1st place in no more than one category</li>
@@ -178,27 +206,36 @@
 
 <div class="container footer">
 	<div class="row center">
-		<img class="leaf" src="images/leaf.png" width="30">
-		<div>Brought to you by<br /><a href="http://createch.me">Createch At USF</a></div>
+		<div class="logo">
+			<a href="http://createch.me" target="_blank">
+				<img class="leaf" src="images/createch-logo-black.png">
+				<div>Brought to you by<br /><span>Createch At USF</span></div>
+			</a>
+		</div>
+		<div class="logo">
+			<a href="http://www.tbtf.org/" target="_blank">
+				<img class="leaf" src="images/tbtf.jpeg">
+				<div>Sponsored by the <br /><span>Tampa Bay Technology Forum</span></div>
+			</a>
+		</div>
 	</div>
 </div>
-
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/lib/happy.js"></script>
 <script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/landing.js"></script>2
+<script type="text/javascript" src="js/landing.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-34990699-1']);
   _gaq.push(['_trackPageview']);
+  _gaq.push(['_setCustomVar', 1, 'AB Testing','<? echo $ab ?>', 3]);
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 <!-- Live Reload 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
