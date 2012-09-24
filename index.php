@@ -65,7 +65,7 @@
 					require_once 'config.php';
 					require_once 'idiorm/idiorm.php';
 
-					ORM::configure('mysql:host=localhost;dbname=hackathon');
+					ORM::configure('mysql:host='.$host.';dbname='.$dbname.'');
 					ORM::configure('username', $user);
 					ORM::configure('password', $pass);
 
@@ -183,14 +183,24 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/lib/happy.js"></script>
 <script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/landing.js"></script>
+<script type="text/javascript" src="js/landing.js"></script>2
 <script type="text/javascript">
-</script>
 
-<!-- Live Reload -->
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34990699-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Live Reload 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <!-- Weinre  
  <script src="http://131.247.233.193:12345/target/target-script-min.js#2398230876578"></script> 

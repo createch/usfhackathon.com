@@ -5,7 +5,7 @@ require_once 'idiorm/idiorm.php';
 
 ORM::configure('error_mode', PDO::ERRMODE_WARNING);
 
-ORM::configure('mysql:host=localhost;dbname=hackathon');
+ORM::configure('mysql:host='.$host.';dbname='.$dbname.'');
 ORM::configure('username', $user);
 ORM::configure('password', $pass);
 

@@ -9,7 +9,7 @@ curl -d "first=asdf&last=sdwef&email=ijf@ijeif.com&skill=designer&phone=23i1&web
 require_once 'config.php';
 require_once 'idiorm/idiorm.php';
 
-ORM::configure('mysql:host=localhost;dbname=hackathon');
+ORM::configure('mysql:host='.$host.';dbname='.$dbname.'');
 ORM::configure('username', $user);
 ORM::configure('password', $pass);
 

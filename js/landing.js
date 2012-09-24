@@ -46,7 +46,6 @@
 			$('#signup-form').isHappy({
 				submitButton: '#signup-form .submit',
 				submitCallback: function() {
-					alert("Hai");
 					$.ajax({
 						type: 'POST',
 						url: 'subscribe.php',
