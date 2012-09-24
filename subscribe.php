@@ -44,8 +44,7 @@ $sysmsg = $guest->first . " : first\n" . $guest->last . " : last\n" . $guest->em
 $guestmsg = "Hey ". $guest->first .",\n\nThanks for signing up for the The Createch Hackathon. See you on the Saturday that your Saturday will be.\n\nBe sure to view and share your ideas for what to build at the hackathon, here http://createchusf.uservoice.com/forums/177021-general \n\n -\nCreatech at USF\nhttp://facebook.com/createchusf\n (Oh, and do let us know if we're taking the Old Spice Man joke a little too far. :P) ";
 
 mail($guest->email, "Registered: The Createch Hackathon", $guestmsg, $headers);
-mail('luqmaan@createchwebdesign.com', $guest->first . " " . $guest->last, $sysmsg);
-mail('hebrontgeorge@gmail.com', $guest->first . " " . $guest->last, $sysmsg);
+require_once 'notify_us.php';
 
 $output = array(
 	"result" => "success",
