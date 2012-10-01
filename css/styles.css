@@ -316,10 +316,8 @@
 		color: #000;
 	}
 	.footer .logo {
-		display: inline-block;
-		margin: 20px;
 		vertical-align: bottom;
-
+		padding-bottom: 30px;
 	}
 	.footer .logo img {
 		max-height: 100px;
@@ -402,6 +400,13 @@
 		color: #271E01;
 		letter-spacing: 2px;
 		font: 10px/9px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+	}
+	.landing .dash-box .signedup {
+		display: block;
+		color: #271E01;
+		letter-spacing: 2px;
+		font: 10px/9px NovecentowideLightBold, 'Helvetica Neue', Arial, sans-serif;
+		margin: -20px 0px 0px;
 	}
 	/* actions bar */
 	.landing .actionsbar {

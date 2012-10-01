@@ -80,7 +80,8 @@
 				?>
 				<span class="number"><? echo $empty_seats  ?></span>
 				<span class="dash darkgrey"></span>
-				<span class="text">seats remain</span>
+				<span class="text">seats remain</span><br />
+				<span class="signedup"><? echo $seats_filled ?> signed up</span>
 			</div>
 			<div class="serif">
 				<span>Saturday, October 6th &mdash; 10am</span><br />
@@ -132,42 +133,65 @@
 <div class="container news">
 	<div class="row">
 		<div class="twelvecol">
-			<p>News: We're excited to announce our first sponsor! The <a href="http://www.tbtf.org" target="_blank">Tampa Bay Technology Forum</a>. </p>
+			<p>We've got a new schedule and new prizes!</p>
+			<p>Sponsored by the <a href="http://www.tbtf.org/events/event_details.asp?id=262490" target="_blank">Tampa Bay Technology Forum, check out their Internship Fair</a>. Also sponsored by <a href="http://sites.nielsen.com/careers/university-recruiting/" target="_blank">Nielsen</a>.</p>
 		</div>
 	</div>
 </div>
 <div class="container infocols">
 	<div class="row">
-		<div class="threecol">
+		<div class="fourcol">
 			<h3>Schedule</h3>
+			Saturday:
 			<ul>
 				<li>10:00 -> Breakfast Served</li>
 				<li>10:30 -> Pitch Ideas</li>
-				<li>11:15 -> Vote on Ideas</li>
-				<li>11:35 -> Announce Best Ideas</li>
-				<li>11:45 -> Form Teams &amp; Code!</li>
+				<li>11:15 -> Commissioner Sharpe speaks</li>
+				<li>11:30 -> Vote on Ideas</li>
+				<li>11:45 -> Announce Best Ideas, Form Teams &amp; Code!</li>
 				<li>13:30 -> Lunch Served</li>
-				<li>18:45 -> Submissions Due</li>
-				<li>19:15 -> Winners Announced</li>
+				<li>18:00 -> Snacks</li>
+				<li>19:15 -> Room closes, continue hacking elsewhere</li>
 			</ul>
-			<p>* Sorry, military time just looks perty</p>
-		</div>
-		<div class="threecol">
-			<h3>Judging &amp; Awards</h3>
-			<p>Prizes will be awared to 1st place and 2nd place teams in the following categories:</p>
+			Sunday:
 			<ul>
-				<li>Best Overal Execution</li>
-				<li>Best Code</li>
-				<li>Best Design</li>
+				<li>23:59 -> Submissions due via GitHub</li>
+			</ul>
+			Thursday:
+			<ul>
+				<li>23:59 -> Winners announced</li>
+			</ul>
+			Friday, Saturday, Sunday:
+			<ul>
+				<li>Any time -> Pick up your prizes</li>
+			</ul>
+
+		</div>
+		<div class="fourcol">
+			<h3>Judging &amp; Awards</h3>
+			<p>Prizes will be awared to 1st, 2nd, and 3rd place.</p>
+			<ul>
+				<li>Overall Execution</li>
+				<li>Code Quality</li>
+				<li>Design &amp; Aesthetics</li>
+				<li>Usefulness &amp; relevance to USF/Tampa/Hillsborough</li>
 			</ul>
 			<p>Some of the swag we'll be giving away:</p>
 			<ul>
-				<li>3 Months Xbox Live Gold Subscription</li>
-				<li>1 Year of Github w/ 5 Private Repos</li>
-				<li>1 Year of Spotify Premium</li>
+				<li>1st Place - $100 Newegg Gift Cards for each team member</li>
+				<li>2nd &amp; 3rd Place - Arduino Uno + Starter Kit for each team member</li>
+				<li>Raffle - Arduino Uno + Starter Kit at random times of the day</li>
+			</ul>
+			<h3>Rules</h3>
+			<ul>
+				<li>All entries must relate to USF, Tampa or Hillsborough County</li>
+				<li>All entries must be submitted via Github</li>
+				<li>Teams may consist of up to five developers</li>
+				<li>The competition is open to all USF students</li>
+				<li>Teams may win 1st place in no more than one category</li>
 			</ul>
 		</div>
-		<div class="threecol">
+		<div class="fourcol last">
 			<h3>Where</h3>
 			<p>The Hackathon will be Saturday, October 6th at 10am in the USF Enginering Success Center (Kopp Building 104, 105)</p>
 			<h3>What to bring</h3>
@@ -176,16 +200,6 @@
 				<li>Ideas to pitch</li>
 				<li>Amigos and teammates</li>
 				<li>Computer w/ development tools</li>
-			</ul>
-		</div>
-		<div class="threecol last">
-			<h3>Rules</h3>
-			<ul>
-				<li>All entries must relate to USF, Tampa or Hillsborough County</li>
-				<li>All entries must be submitted via Github</li>
-				<li>Teams may consist of up to five developers</li>
-				<li>The competition is open to all USF students</li>
-				<li>Teams may win 1st place in no more than one category</li>
 			</ul>
 		</div>
 	</div>
@@ -206,16 +220,22 @@
 
 <div class="container footer">
 	<div class="row center">
-		<div class="logo">
+		<div class="logo fourcol">
+			<a href="http://www.tbtf.org/events/event_details.asp?id=262490" target="_blank">
+				<img class="leaf" src="images/tbtf.jpeg">
+				<div>Sponsored by <br /><span>Tampa Bay Technology Forum</span></div>
+			</a>
+		</div>
+		<div class="logo fourcol">
 			<a href="http://createch.me" target="_blank">
 				<img class="leaf" src="images/createch-logo-black.png">
 				<div>Brought to you by<br /><span>Createch At USF</span></div>
 			</a>
 		</div>
-		<div class="logo">
-			<a href="http://www.tbtf.org/" target="_blank">
-				<img class="leaf" src="images/tbtf.jpeg">
-				<div>Sponsored by the <br /><span>Tampa Bay Technology Forum</span></div>
+		<div class="logo fourcol last">
+			<a href="http://sites.nielsen.com/careers/university-recruiting/" target="_blank">
+				<img class="leaf" src="images/nielsen.png">
+				<div>Sponsored by <br /><span>Nielsen</span></div>
 			</a>
 		</div>
 	</div>
