@@ -9,7 +9,7 @@
 	<meta property="og:title" content="The Createch Hackathon" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.usfhackathon.com/" />
-	<meta property="og:description" content="USF's First Hackathon - On Saturday, October the 6th, join us for a day of epic code, caffeine, free food, and swag! Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general. One rule. Your app must relate to USF, Tampa, or Hillsborough." /> 
+	<meta property="og:description" content="USF's First Hackathon - On Saturday, October the 6th, join us for a day of epic code, caffeine, free food, and swag! Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general. One rule. Your app must relate to USF, Tampa, or Hillsborough." />
 	<meta property="og:image" content="http://www.usfhackathon.com/assets/the-saturday-your-saturday-could-be-square.jpg" />
 
 	<!-- 1140px Grid styles for IE -->
@@ -17,7 +17,7 @@
 
 	<!-- The 1140px Grid - http://cssgrid.net/ -->
 	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
-	
+
 	<!-- Your styles -->
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 
@@ -66,22 +66,10 @@
 		<div class="threecol heroaction">
 			<div class="dash-box center">
 				<span class="dash darkgrey"></span>
-				<?
-					require_once 'config.php';
-					require_once 'idiorm/idiorm.php';
-
-					ORM::configure('mysql:host='.$host.';dbname='.$dbname.'');
-					ORM::configure('username', $user);
-					ORM::configure('password', $pass);
-
-					$max_seats = ORM::for_table('option')->where('name', 'max_guests')->find_one()->value;
-					$seats_filled = ORM::for_table('guest')->where('status', 'valid')->count();
-					$empty_seats = $max_seats - $seats_filled;
-				?>
-				<span class="number"><? echo $empty_seats  ?></span>
+				<span class="number">69</span>
 				<span class="dash darkgrey"></span>
 				<span class="text">seats remain</span><br />
-				<span class="signedup"><? echo $seats_filled ?> signed up</span>
+				<span class="signedup">666 signed up</span>
 			</div>
 			<div class="serif">
 				<span>Saturday, October 6th &mdash; 10am</span><br />
@@ -90,26 +78,12 @@
 			<div id="signup-developer" class="signup button" data-value="developer">Sign Up As A Developer</div>
 		</div>
 		<div class="sevencol last" id="hero1">
-			<?
-				$ab =  $_GET['ab'] || rand(0,1);
-				switch ($ab) {
-					case 0: ?>
-						<p class="serif">Tired of spending Saturday's doing homework? Or stuck in your dorm? Spending too much time working alone on that side project?</p>
-						<p>Make this weekend unlike any other. Join us for a day of epic code, caffeine, free food, and swag!</p>
-						<p>Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general.</p>						<p>One rule. Your app must relate to USF, Tampa, or Hillsborough. Build anything from an app that shows you the menu at Juniper Dining to a text messaging service that tells you when the next HART bus is coming. And if you don't necessarily know how to build something, the person sitting next to you probably will.</p>
-						<h4><a href='javascript:void($("html,body").animate({scrollTop: $(".ideas").offset().top}))' target="_blank">Jump to the ideas &gt;</a></h4>
-					<? break;
-
-					case 1: default: ?>
-						<p class="serif saturday">The Saturday your Saturday could be.</p>
-						<p>Look at your calendar. Now look back at me. Now look at your calendar. Now look back at me.</p>
-						<p>See that Saturday on the 6th? That's the Saturday your Saturday could be. Sadly, it isn't. But it could be, if you went to the Createch Hackathon.</p>
-						<p>On Saturday, October the 6th, join us for a day of epic code, caffeine, free food, and swag! Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general.</p>
-						<p>One rule. Your app must relate to USF, Tampa, or Hillsborough. Build anything from an app that shows you the menu at Juniper Dining to a text messaging service that tells you when the next HART bus is coming. And if you don't necessarily know how to build something, the person sitting next to you probably will.</p>
-						<h4><a href='javascript:void($("html,body").animate({scrollTop: $(".ideas").offset().top}))' target="_blank">Jump to the ideas &gt;</a></h4>
-					<? break;
-				}
-			?>
+			<p class="serif saturday">The Saturday your Saturday could be.</p>
+			<p>Look at your calendar. Now look back at me. Now look at your calendar. Now look back at me.</p>
+			<p>See that Saturday on the 6th? That's the Saturday your Saturday could be. Sadly, it isn't. But it could be, if you went to the Createch Hackathon.</p>
+			<p>On Saturday, October the 6th, join us for a day of epic code, caffeine, free food, and swag! Come to The Createch Hackathon and work with fellow developers to build apps, websites, and software in general.</p>
+			<p>One rule. Your app must relate to USF, Tampa, or Hillsborough. Build anything from an app that shows you the menu at Juniper Dining to a text messaging service that tells you when the next HART bus is coming. And if you don't necessarily know how to build something, the person sitting next to you probably will.</p>
+			<h4><a href='javascript:void($("html,body").animate({scrollTop: $(".ideas").offset().top}))' target="_blank">Jump to the ideas &gt;</a></h4>
 		</div>
 		<div class="sevencol last hide" id="hero2">
 			<form id="signup-form">
@@ -257,10 +231,10 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-<!-- Live Reload 
+<!-- Live Reload
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-<!-- Weinre  
- <script src="http://131.247.233.193:12345/target/target-script-min.js#2398230876578"></script> 
+<!-- Weinre
+ <script src="http://131.247.233.193:12345/target/target-script-min.js#2398230876578"></script>
 -->
 </body>
 
